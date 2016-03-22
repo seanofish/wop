@@ -1,0 +1,9 @@
+<div ng-controller="addPlayersCtrl as addP">
+    
+    <input type="text" ng-model="player.name" />
+    
+    <ul>
+        <li ng-repeat="theplayer in addP.players">{{theplayer.name}}</li>
+    </ul>
+    <button ng-click="addP.add()">+</button>
+</div>

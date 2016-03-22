@@ -1,4 +1,9 @@
-var wop = angular.module('wop',['ui.router']);
+var wop = angular.module('wop',
+['ui.router', 
+    'ngAnimate', 
+    'ngAria', 
+    'ngMaterial'
+]);
 
 wop.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
@@ -10,13 +15,13 @@ wop.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlR
     })
     .state('/', {
       url: "/",
-      templateUrl: "template/home.html",
-      controller: "homeCtrl"
+      templateUrl: "templates/home.html",
+      controller: 'homeCtrl'
     })
-//    .state('state2', {
-//      url: "/state2",
-//      templateUrl: "partials/state2.html"
-//    })
+    .state('addPlayers', {
+      url: "/addplayers",
+      templateUrl: "templates/addPlayers.html"
+    })
 //    .state('state2.list', {
 //      url: "/list",
 //      templateUrl: "partials/state2.list.html",
