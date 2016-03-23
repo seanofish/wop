@@ -1,9 +1,30 @@
-<div ng-controller="addPlayersCtrl as addP">
-    
-    <input type="text" ng-model="player.name" />
-    
-    <ul>
-        <li ng-repeat="theplayer in addP.players">{{theplayer.name}}</li>
-    </ul>
-    <button ng-click="addP.add()">+</button>
+<div ng-controller="addPlayersCtrl as addP" layout="column" layout-padding ng-cloak>
+  <br/>
+  <md-content class="md-no-momentum">
+    <md-input-container class="md-icon-float md-block">
+      <!-- Use floating label instead of placeholder -->
+      <label>Name</label>
+      <md-icon aria-label="Person" class="material-icons">person</md-icon>
+      <input ng-model="user.name" type="text">
+    </md-input-container>
+    <md-input-container md-no-float class="md-block">
+      <md-icon aria-label="Phone" class="material-icons">phone</md-icon>
+      <input ng-model="user.phone" type="text" placeholder="Phone Number">
+    </md-input-container>
+    <md-input-container class="md-block">
+      <!-- Use floating placeholder instead of label -->
+      <md-icon aria-label="Phone" class="material-icons">email</md-icon>
+      <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+    </md-input-container>
+    <md-input-container md-no-float class="md-block">
+      <input ng-model="user.address" type="text" placeholder="Address" >
+      <md-icon aria-label="place" class="material-icons">place</md-icon>
+    </md-input-container>
+    <md-input-container class="md-icon-float md-icon-right md-block">
+      <label>Donation Amount</label>
+      <md-icon aria-label="place" class="material-icons">card_giftcard</md-icon>
+      <input ng-model="user.donation" type="number" step="0.01">
+      <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
+    </md-input-container>
+  </md-content>
 </div>

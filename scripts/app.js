@@ -2,6 +2,7 @@ var wop = angular.module('wop',
 ['ui.router', 
     'ngAnimate', 
     'ngAria', 
+    'ngMessages', 
     'ngMaterial'
 ]);
 
@@ -29,5 +30,8 @@ wop.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlR
 //        $scope.things = ["A", "Set", "Of", "Things"];
 //      }
 //    });
-}]);
+}])
+.config(function($mdIconProvider) {
+  $mdIconProvider.fontSet('fa', 'fontawesome');
+});
 	
